@@ -1,0 +1,28 @@
+<div *ngIf="!isFilledRequeredField" class="start-select-level">
+  <label id="example-radio-group-label" class="example-radio-group-label">Choose the question level:</label>
+  <mat-radio-group
+    aria-labelledby="example-radio-group-label"
+    class="example-radio-group"
+    [(ngModel)]="selectedLevel">
+    <mat-radio-button class="example-radio-button" *ngFor="let level of levels" [value]="level">
+      {{level}}
+    </mat-radio-button>
+  </mat-radio-group>
+  <div class="card-buttons">
+    <button class="btn exit" [routerLink]="exit()">EXIT</button>
+    <button class="btn next" (click)="startGame()">START</button>
+  </div>
+</div>
+<div *ngIf="isFilledRequeredField">
+  <div class="passStep">Пропущено питань: {{passedStep}}</div>
+  <div class="card" (click)="nextQuestion()" [@cardFlip]="state">
+    <div class="face back" [innerHTML]="currentQuestion?.description"></div>
+    <div class="face front" [innerHTML]="currentQuestion?.description"></div>
+  </div>
+
+  <div class="card-buttons">
+    <button class="btn exit" [routerLink]="exit()">EXIT</button>
+    <button class="btn pass" *ngIf="currentQuestion?.id != 0" (click)="pass()">PASS</button>
+    <button class="btn next" (click)="nextQuestion()">NEXT</button>
+  </div>
+</div>

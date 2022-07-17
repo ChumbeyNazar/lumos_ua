@@ -1,0 +1,128 @@
+.start-select-level {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  padding: 50px 20px;
+  margin: 50px 0;
+
+  box-shadow: 10px 10px 43px -18px rgba(0, 0, 0, 0.75);
+
+  font-weight: bolder;
+  background: rgb(2, 1, 42);
+
+  color: gold;
+
+  border-radius: 2px;
+  border: 12px rgba(255, 233, 0, 0.81) solid;
+
+  font-size: 18px;
+}
+
+.passStep{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  color: black;
+}
+
+.example-radio-group-label {
+  color: white;
+}
+
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 15px 0;
+  align-items: flex-start;
+  color: white;
+}
+
+.example-radio-button {
+  margin: 5px;
+  caret-color: gold;
+  color: white;
+}
+
+.card {
+  width: auto;
+  height: 390px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  padding: 20px;
+  margin: 20px 10px;
+
+  box-shadow: 10px 10px 43px -18px rgba(0, 0, 0, 0.75);
+
+  //font-weight: bolder;
+  background: rgb(2, 1, 42);
+
+  color: gold;
+
+  border-radius: 2px;
+  border: 12px rgba(255, 233, 0, 0.81) solid;
+
+  font-size: 22px;
+  text-align: center;
+
+  transform-style: preserve-3d;
+
+  .face {
+
+    border-radius: inherit;
+    backface-visibility: hidden;
+  }
+}
+
+.front {
+  transform: rotateY(180deg);
+}
+
+.card-buttons {
+  width: auto;
+  height: 35px;
+
+  margin: 10px;
+
+  display: flex;
+  justify-content: space-between;
+
+
+  .btn {
+    width: 100px;
+    margin: 0 5px;
+    font-size: 18px;
+
+    border: 2px gold solid;
+    border-radius: 2px;
+
+    transition-duration: 0.5s;
+    &:hover {
+      color: black;
+      background-color: gold;
+    }
+  }
+
+  .next, .pass, .exit {
+    color: white;
+  }
+
+  .next {
+    background-color: black;
+  }
+
+  .pass {
+    background-color: black;
+  }
+
+  .exit {
+    background-color: black;
+  }
+}
